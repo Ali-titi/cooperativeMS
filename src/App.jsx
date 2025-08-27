@@ -1,25 +1,75 @@
-
-import { ToastContainer } from 'react-toastify';
-import './App.css'
-import Dashboard from './Pages/Dashboard';
-import Login from './Pages/Login'
-import SignUp from './Pages/SignUp'
-import { Routes, Route } from 'react-router-dom';
+// src/App.jsx
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './components/common/ProtectedRoute';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
+import MemberDashboard from './components/member/MemberDashboard';
+//import PresidentDashboard from './components/president/PresidentDashboard';
+//import AccountantDashboard from './components/accountant/AccountantDashboard';
+import Home from './pages/Homes';
 
 function App() {
- 
-
   return (
-    <div className="">
-<Routes >
-  <Route path='/' element={<Login/>}/>
-  <Route path='/signup' element={<SignUp/>}/>
-  
-  <Route path='/dashboard' element={<Dashboard/>}/>
-</Routes>
-   <ToastContainer autoClose={1000} />
-    </div>
-  )
+    <AuthProvider>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            
+            {/* Protected Routes */}
+            <Route
+              path="/member/*"
+              element={
+                <ProtectedRoute allowedRoles={['member']}>
+                  <MemberDashboard />
+                </ProtectedRoute>
+              }
+            />
+            {/* <Route
+              path="/president/*"
+              element={
+                <ProtectedRoute allowedRoles={['president']}>
+                  <PresidentDashboard />
+                </ProtectedRoute>
+              }
+            /> */}
+            {/* <Route
+              path="/accountant/*"
+              element={
+                <ProtectedRoute allowedRoles={['accountant']}>
+                  <AccountantDashboard />
+                </ProtectedRoute>
+              } */}
+            />
+            
+            {/* Fallback */}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+          
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              duration: 4000,
+              style: {
+                background: '#363636',
+                color: '#fff',
+              },
+              success: {
+                duration: 1000,
+                theme: {
+                  primary: '#4aed88',
+                },
+              },
+            }}
+          />
+        </div>
+      </Router>
+    </AuthProvider>
+  );
 }
 
-export default App
+export default App;
