@@ -1,6 +1,6 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
+import { ToastContainer } from 'react-toastify';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/common/ProtectedRoute';
 import Login from './components/auth/Login';
@@ -16,7 +16,7 @@ function App() {
       <Router>
         <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Homes />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             
@@ -43,8 +43,8 @@ function App() {
                 <ProtectedRoute allowedRoles={['accountant']}>
                   <AccountantDashboard />
                 </ProtectedRoute>
-              } */}
-            />
+              }
+            /> */}
             
             {/* Fallback */}
             <Route path="*" element={<Navigate to="/" replace />} />

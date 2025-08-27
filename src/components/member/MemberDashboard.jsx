@@ -17,7 +17,7 @@ import {
   Plus
 } from 'lucide-react';
 import AccountOpening from './AccountOpening';
-import SavingsDeposit from './SavingsDeposit';
+import SavingsDeposit from './SavingDeposit';
 import LoanApplication from './LoanApplication';
 
 const MemberDashboard = () => {
