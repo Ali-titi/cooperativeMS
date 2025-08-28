@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { doc, setDoc, collection, addDoc } from 'firebase/firestore';
-import { db } from '/firebase.config';
+import { db } from '../../../firebase.config';
 import { toast } from 'react-toastify';
 import { User, Mail, Phone, MapPin, Calendar, DollarSign, FileText, CheckCircle, Upload } from 'lucide-react';
 

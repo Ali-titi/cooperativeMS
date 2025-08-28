@@ -1,6 +1,7 @@
 // firebase.config.js
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";  // ✅ Proper import
+import { getFirestore } from "firebase/firestore";
 
 // Your Firebase config (keep your actual keys here)
 const firebaseConfig = {
@@ -16,4 +17,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // ✅ Export the Auth instance once
-export const firebase_auth = getAuth(app);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
