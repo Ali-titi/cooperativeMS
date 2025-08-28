@@ -124,7 +124,7 @@ const Home = () => {
                 <>
                   <Link
                     to="/register"
-                    className="bg-primary-600 text-white px-8 py-4 rounded-xl hover:bg-primary-700 transition-all transform hover:scale-105 font-semibold text-lg shadow-lg"
+                    className="bg-primary-600 text-black px-8 py-4 rounded-xl hover:bg-primary-700 transition-all transform hover:scale-105 font-semibold text-lg shadow-lg"
                   >
                     Get Started
                   </Link>

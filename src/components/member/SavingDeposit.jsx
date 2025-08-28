@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { collection, addDoc, query, where, orderBy, onSnapshot } from 'firebase/firestore';
-import { db } from '/firebase.config';
+import { db } from '../../../firebase.config';
 import { toast } from 'react-toastify';
 import { PiggyBank, DollarSign, Calendar, Receipt, TrendingUp, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 
