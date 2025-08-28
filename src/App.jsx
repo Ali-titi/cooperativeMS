@@ -1,12 +1,12 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+import { Toaster } from 'react-toastify';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/common/ProtectedRoute';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import MemberDashboard from './components/member/MemberDashboard';
-//import PresidentDashboard from './components/president/PresidentDashboard';
+import PresidentDashboard from './components/president/PresidentDashboard';
 //import AccountantDashboard from './components/accountant/AccountantDashboard';
 import Home from './pages/Homes';
 
@@ -19,7 +19,7 @@ function App() {
             <Route path="/" element={<Homes />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            
+
             {/* Protected Routes */}
             <Route
               path="/member/*"
@@ -29,14 +29,14 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            {/* <Route
+            <Route
               path="/president/*"
               element={
                 <ProtectedRoute allowedRoles={['president']}>
                   <PresidentDashboard />
                 </ProtectedRoute>
               }
-            /> */}
+            />
             {/* <Route
               path="/accountant/*"
               element={
@@ -45,11 +45,11 @@ function App() {
                 </ProtectedRoute>
               }
             /> */}
-            
+
             {/* Fallback */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-          
+
           <Toaster
             position="top-right"
             toastOptions={{
