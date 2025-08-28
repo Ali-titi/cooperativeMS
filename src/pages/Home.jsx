@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Users, PiggyBank, CreditCard, TrendingUp, Shield, Award } from 'lucide-react';
@@ -55,10 +54,10 @@ const Home = () => {
                 <Users className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-gray-800">
                   CoopManager
                 </h1>
-                <p className="text-sm text-gray-500">Cooperative Management System</p>
+            
               </div>
             </div>
             <nav className="hidden md:flex space-x-8">
@@ -73,9 +72,9 @@ const Home = () => {
               {currentUser ? (
                 <Link
                   to={getDashboardPath()}
-                  className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium"
+                  className="bg-primary-600 text-gray-600 px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium"
                 >
-                  Dashboard
+                  Join Us
                 </Link>
               ) : (
                 <>
@@ -116,7 +115,7 @@ const Home = () => {
               {currentUser ? (
                 <Link
                   to={getDashboardPath()}
-                  className="bg-primary-600 text-white px-8 py-4 rounded-xl hover:bg-primary-700 transition-all transform hover:scale-105 font-semibold text-lg shadow-lg"
+                  className="bg-primary-600 text-gray-700 px-8 py-4 rounded-xl hover:bg-primary-700 transition-all transform hover:scale-105 font-semibold text-lg shadow-lg"
                 >
                   Go to Dashboard
                 </Link>
@@ -177,7 +176,7 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Cooperative?
             </h2>
-            <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
               Join hundreds of cooperatives already using our platform to streamline their operations
             </p>
             {!currentUser && (
@@ -206,7 +205,7 @@ const Home = () => {
           </p>
           <div className="border-t border-gray-800 pt-6">
             <p className="text-gray-500">
-              © 2024 CoopManager. All rights reserved.
+              © 2025 CoopManager. All rights reserved.
             </p>
           </div>
         </div>
