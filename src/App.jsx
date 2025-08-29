@@ -7,7 +7,7 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import MemberDashboard from './components/member/MemberDashboard';
 import PresidentDashboard from './components/president/PresidentDashboard';
-// import AccountantDashboard from './components/accountant/AccountantDashboard';
+import AccountantDashboard from './components/president/AccountantDashboard';
 import Home from './pages/Home';
 
 function App() {
@@ -37,14 +37,14 @@ function App() {
             }
           />
 
-          {/* <Route
+          <Route
             path="/accountant/*"
             element={
               <ProtectedRoute allowedRoles={['accountant']}>
                 <AccountantDashboard />
               </ProtectedRoute>
             }
-          /> */}
+          />
 
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />

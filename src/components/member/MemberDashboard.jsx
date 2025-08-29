@@ -62,10 +62,10 @@ const MemberDashboard = () => {
           <div className="flex items-center">
             <Clock className="h-5 w-5 text-accent-600 mr-3" />
             <div>
-              <h3 className="text-sm font-medium text-accent-800">Account Pending Approval</h3>
-              <p className="text-sm text-accent-700 mt-1">
+              <h3 className="text-sm font-medium text-accent-800">Account Approvaled</h3>
+              {/* <p className="text-sm text-accent-700 mt-1">
                 Your account is waiting for approval from the cooperative president. You can still browse the system.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

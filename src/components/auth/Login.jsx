@@ -1,4 +1,3 @@
-// src/components/auth/Login.jsx
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -148,13 +147,13 @@ const Login = () => {
                   type="checkbox"
                   className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
                 />
-                <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
+                <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-600">
                   Remember me
                 </label>
               </div>
               <Link
                 to="/forgot-password"
-                className="text-sm text-primary-600 hover:text-primary-500 font-medium"
+                className="text-sm text-gray-600 hover:text-primary-500 font-medium"
               >
                 Forgot password?
               </Link>

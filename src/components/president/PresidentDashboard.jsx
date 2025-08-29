@@ -1,4 +1,3 @@
-// src/components/president/PresidentDashboard.jsx
 import { useState, useEffect } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -211,7 +210,7 @@ const PresidentDashboard = () => {
     <div className="p-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">
-          Welcome, President {userProfile?.firstName}!
+          Welcome, President {userProfile?.firstName}.
         </h1>
         <p className="text-gray-600">Manage your cooperative operations and approvals</p>
       </div>

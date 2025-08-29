@@ -80,13 +80,13 @@ const Home = () => {
                 <>
                   <Link
                     to="/login"
-                    className="text-primary-600 hover:text-primary-700 font-medium transition-colors px-4 py-2"
+                    className="text-gray-600 hover:text-primary-700 font-medium transition-colors px-4 py-2"
                   >
                     Login
                   </Link>
                   <Link
                     to="/register"
-                    className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium"
+                    className="bg-primary-600 text-gray-600 px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium"
                   >
                     Register
                   </Link>
@@ -129,7 +129,7 @@ const Home = () => {
                   </Link>
                   <Link
                     to="/login"
-                    className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-xl hover:bg-primary-50 transition-all font-semibold text-lg"
+                    className="bg-primary-600 text-black px-8 py-4 rounded-xl hover:bg-primary-700 transition-all transform hover:scale-105 font-semibold text-lg shadow-lg"
                   >
                     Login
                   </Link>
@@ -182,7 +182,7 @@ const Home = () => {
             {!currentUser && (
               <Link
                 to="/register"
-                className="bg-white text-primary-600 px-8 py-4 rounded-xl hover:bg-gray-50 transition-all transform hover:scale-105 font-semibold text-lg inline-block shadow-lg"
+                className="bg-white text-gray-800 px-8 py-4 rounded-xl hover:bg-gray-50 transition-all transform hover:scale-105 font-semibold text-lg inline-block shadow-lg"
               >
                 Start Your Journey Today
               </Link>
